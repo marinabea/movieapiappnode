@@ -21,9 +21,11 @@ function getMediaInformationFromAPIWithTitle(mediaName) {
 }
 
 function showApiResults(data) {
-  console.log(data);
-  console.log("Title:\t" + data.Title);
-  console.log("Year:\t" + data.Year);
-  console.log("Plot:\t" + data.Plot);
+  document.querySelector('.media-item').style.visibility = 'visible';
+  document.querySelector('.media-item--img').src = data.Poster;
+  document.querySelector('.media-item--title').innerHTML = data.Title;
+  document.querySelector('.media-item--year').innerHTML = data.Year;
+  document.querySelector('.media-item--plot').innerHTML = data.Plot;
+  document.querySelector('.media-item--genre').innerHTML = data.Genre;
 }
 
